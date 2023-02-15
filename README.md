@@ -23,7 +23,7 @@ TODO: Reference a `Logical Implementation Diagram` as needed.
 
 ## Deploy/Integrate to Accounts
 
-- [ ] Development
+- [X] Development
 - [ ] Management
 - [ ] Staging
 - [ ] Production
@@ -36,7 +36,7 @@ TODO: Reference a `Logical Implementation Diagram` as needed.
 ## Deployment Method
 
 - [ ] Manual
-- [ ] IaC Automation [iac_module, cots_module, platform, tenant]
+- [X] IaC Automation [iac_module, cots_module, platform, tenant]
 - [ ] Vendor Managed (SaaS/PaaS)
 - [ ] Other (Explain)
 
@@ -44,7 +44,7 @@ TODO: Reference a `Logical Implementation Diagram` as needed.
 
 - [ ] Virtual Compute
 - [ ] Docker Swarm
-- [ ] Kubernetes
+- [X] Kubernetes
 - [ ] Native Service
 - [ ] Vendor Managed (SaaS/PaaS)
 - [ ] Other (Explain)
@@ -53,24 +53,27 @@ TODO: Reference a `Logical Implementation Diagram` as needed.
 
 - [ ] RedHat
 - [ ] Windows
-- [ ] N/A
+- [X] N/A
 
 ## Networking
 
 |CIDR Range|
-|---|
+|10.199.65.0/24|
 ||
 
 ### Availability Zones
 
 |Region|Resource Name|
-|----|-------------|
+|North Virginia|us-east-1a|us-east-1b|
 ||||
 
 ### Subnets
 
 |Type|Resource Name|Availability Zone|CIDR Range|
-|----|-------------|-----------------|----------|
+|Private|Pubternal A|us-east-1a|10.199.65.0/25|
+|Private|Pubternal B|us-east-1b|10.199.65.128/25|
+|Private|Private subnet APP A|us-east-1a|10.255.0.0/19|
+|Private|Private subnet APP B|us-east-1b|10.255.32.0/19|
 |||
 
 ### DNS
